@@ -33,5 +33,10 @@ router.get('/simple/get', async ctx => {
   }
 })
 
+router.get('/base/get', async ctx => {
+  const { query } = ctx
+  ctx.body = query
+})
+
 const port = process.env.PORT || 8090
 app.listen(port, console.log(`server start at port ${port}`))
